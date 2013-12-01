@@ -8,6 +8,11 @@ USER_NAME = ARGV[2]
 PASSWORD = ARGV[3]
 EMAILS = ARGV[4..-1]
 
+begin
+  load "config.rb"
+rescue LoadError
+end
+
 puts "access facebook ..."
 graph = Koala::Facebook::API.new(ACCESS_TOKEN)
 feeds = graph.get_connections(GROUP_ID, "feed")
