@@ -45,7 +45,7 @@ messages << "https://www.facebook.com/groups/#{GROUP_ID}/"
 
 puts "send mail new feeds ..."
 mail = Mail.new do
-  from    FROM,
+  from    FROM
   to      EMAILS.join(",")
   subject SUBJECT
   body    messages.join("\n")
