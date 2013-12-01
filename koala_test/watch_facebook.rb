@@ -24,8 +24,6 @@ messages = new_feeds.map do |f|
 end
 messages << "https://www.facebook.com/groups/#{GROUP_ID}/"
 
-puts messages
-
 EMAILS = ["a.osada@mugenup.com"]
 IO.popen("mail -s 'Bug Report' #{EMAILS.join(" ")}", "r+") do |io|
   io.puts messages
