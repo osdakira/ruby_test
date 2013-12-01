@@ -7,6 +7,14 @@ GROUP_ID = ARGV[1]
 USER_NAME = ARGV[2]
 PASSWORD = ARGV[3]
 EMAILS = ARGV[4..-1]
+SMTP_SETTINGS = {
+  address:   'smtp.gmail.com',
+  port:      587,
+  domain:    'smtp.gmail.com',
+  user_name: USER_NAME,
+  password:  PASSWORD
+}
+FROM = "bug-report@mugenup.com"
 
 begin
   load "config.rb"
@@ -36,19 +44,13 @@ messages << "https://www.facebook.com/groups/#{GROUP_ID}/"
 
 puts "send mail new feeds ..."
 mail = Mail.new do
-  from    'no-reply@example.com'
+  from    FROM,
   to      EMAILS.join(",")
   subject 'Bug Report'
   body    messages.join("\n")
 end
 mail.charset = 'utf-8'
-mail.delivery_method :smtp, {
-  address:   'smtp.gmail.com',
-  port:      587,
-  domain:    'smtp.gmail.com',
-  user_name: USER_NAME,
-  password:  PASSWORD
-}
+mail.delivery_method :smtp, SMTP_SETTINGS
 mail.deliver!
 
 puts "store feed_ids (#{new_feeds.size}) ..."
