@@ -15,6 +15,7 @@ SMTP_SETTINGS = {
   password:  PASSWORD
 }
 FROM = "bug-report@mugenup.com"
+SUBJECT = 'Bug Report'
 
 begin
   load "config.rb"
@@ -46,7 +47,7 @@ puts "send mail new feeds ..."
 mail = Mail.new do
   from    FROM,
   to      EMAILS.join(",")
-  subject 'Bug Report'
+  subject SUBJECT
   body    messages.join("\n")
 end
 mail.charset = 'utf-8'
