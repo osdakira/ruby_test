@@ -42,5 +42,10 @@ describe User do
       subject = User.includes(:user_items).where("`name` LIKE ?", "%user0.name%").explain
       expect(subject).to include "LEFT OUTER JOIN"
     end
+
+    it "like name with dot on arel" do
+      subject = User.includes(:user_items).where(User.arel_table[:name].matches("%user0.name%")).explain
+      expect(subject).to include "LEFT OUTER JOIN"
+    end
   end
 end
