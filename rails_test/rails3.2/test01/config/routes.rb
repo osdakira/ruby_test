@@ -1,4 +1,7 @@
 Test01::Application.routes.draw do
+  resources :user_items
+
+
   resources :items
 
 
