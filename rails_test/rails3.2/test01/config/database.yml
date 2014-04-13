@@ -10,3 +10,10 @@ development:
   username: root
   password:
   socket: /tmp/mysql.sock
+
+test:
+  <<: *default
+  database: rails-3-2-test01-test
+  username: root
+  password:
+  socket: /tmp/mysql.sock
