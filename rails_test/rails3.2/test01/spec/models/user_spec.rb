@@ -9,7 +9,11 @@ describe User do
     end
   end
 
-  it ".search" do
+  it ".search name" do
     expect(User.search(:name, "user0")).to eq [User.first]
+  end
+
+  it ".search email" do
+    expect(User.search(:email, "user0@example.com")).to eq [User.first]
   end
 end
