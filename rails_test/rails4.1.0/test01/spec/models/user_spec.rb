@@ -16,6 +16,11 @@ describe User do
   end
 
   context "includes" do
+    it "like name call outer join" do
+      subject = User.includes(:user_items).where("user_items.number IS NULL").references(:user_items).explain
+      expect(subject).to include "LEFT OUTER JOIN"
+    end
+
     it "like name" do
       subject = User.includes(:user_items).where("`name` LIKE ?", "%user0%").explain
       expect(subject).not_to include "LEFT OUTER JOIN"
