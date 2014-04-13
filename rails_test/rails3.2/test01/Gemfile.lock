@@ -102,6 +102,9 @@ GEM
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
     slop (3.5.0)
+    spring (1.1.2)
+    spring-commands-rspec (1.0.1)
+      spring (>= 0.9.1)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -124,3 +127,5 @@ DEPENDENCIES
   pry-rails
   rails (= 3.2.16)
   rspec-rails
+  spring
+  spring-commands-rspec
