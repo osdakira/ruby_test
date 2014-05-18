@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 CONSTANT = "トップの定数だよ"
 
 class Person

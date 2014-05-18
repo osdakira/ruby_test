@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require_relative '../person'
 
 describe Person do
@@ -15,9 +14,9 @@ describe Person do
   # it {expect([1, 2, 3]).to respond_to(:take)}
   # it {expect([1, 2, 3]).to respond_to(:take).with(2).arguments}
 
-  it "should be a instance" do
-    expect(Person.new){Person.new}.to be_a(Person)
-  end
+  # it "should be a instance" do
+  #   expect(Person.new){Person.new}.to be_a(Person)
+  # end
 
   # it "should be a instance" do
   #   expect{Person.new}.to be_a(Person)
