@@ -1,0 +1,13 @@
+def context
+  "google.com/"
+end
+
+task :get do
+  system "curl #{context}"
+end
+
+task :production do
+  def context
+    "google.co.jp/"
+  end
+end
