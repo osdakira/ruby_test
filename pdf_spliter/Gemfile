@@ -1,3 +1,7 @@
 source "https://rubygems.org"
 
 gem "origami"
+group :test, :development do
+  gem "pry"
+  gem 'pry-byebug'
+end
