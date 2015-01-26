@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "origami"
+gem "poppler"
 group :test, :development do
   gem "pry"
   gem 'pry-byebug'
