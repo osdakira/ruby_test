@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :users_items
+
   resources :items
 
   resources :users
