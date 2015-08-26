@@ -66,3 +66,5 @@ gem 'compass-rails'
 gem 'slim-rails'
 
 gem 'sidekiq'
+
+gem 'blorgh', path: "../blorgh"

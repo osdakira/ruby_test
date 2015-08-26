@@ -1,3 +1,9 @@
+PATH
+  remote: ../blorgh
+  specs:
+    blorgh (0.0.1)
+      rails (~> 4.2.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -258,6 +264,7 @@ PLATFORMS
 DEPENDENCIES
   annotate (~> 2.6.5)
   awesome_print
+  blorgh!
   byebug (~> 4.0)
   coffee-rails (~> 4.1.0)
   compass-rails
