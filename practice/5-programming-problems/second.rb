@@ -1,5 +1,5 @@
 # 交互に要素を取ることで、2つのリストを結合する関数を記述せよ。例えば [a, b, c]と[1, 2, 3]という2つのリストを与えると、関数は [a, 1, b, 2, c, 3]を返す。
-a_list = [:a, :b, :c]
+a_list = [:a, :b, :c, :d]
 b_list = [1, 2, 3]
 
 def ruby_zip(a_list, b_list)
@@ -22,5 +22,5 @@ def my_zip(a_list, b_list)
   c_list
 end
 
-fail unless ruby_zip(a_list, b_list) == [:a, 1, :b, 2, :c, 3]
-fail unless my_zip(a_list, b_list) == [:a, 1, :b, 2, :c, 3]
+fail unless ruby_zip(a_list, b_list) == [:a, 1, :b, 2, :c, 3, :d, nil]
+fail unless my_zip(a_list, b_list) == [:a, 1, :b, 2, :c, 3, :d]

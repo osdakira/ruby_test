@@ -5,4 +5,5 @@ def get_max_num(num_list)
   num_list.map(&:to_s).sort.reverse.join
 end
 
-fail unless get_max_num([50, 2, 1, 9]) == "95021"
+p get_max_num([50, 7, 1, 9, 18, 170])
+# fail unless get_max_num([50, 2, 1, 9]) == "95021"

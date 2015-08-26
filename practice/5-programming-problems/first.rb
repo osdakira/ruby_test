@@ -23,11 +23,12 @@ def sum_by_while(list)
   size = list.size
   while i < size
     sum += list[i]
+    i += 1
   end
   sum
 end
 
-if sum_by_for(list) == 55
+if sum_by_while(list) == 55
   p "ok sum_by_while"
 else
   fail "fail sum_by_while"
