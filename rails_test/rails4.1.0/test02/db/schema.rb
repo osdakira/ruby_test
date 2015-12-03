@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151203135532) do
+ActiveRecord::Schema.define(version: 20151203135604) do
+
+  create_table "answer_translations", force: true do |t|
+    t.integer  "answer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "answer_translations", ["answer_id"], name: "index_answer_translations_on_answer_id"
 
   create_table "answers", force: true do |t|
     t.integer  "question_id"
