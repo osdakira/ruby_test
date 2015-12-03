@@ -68,3 +68,4 @@ gem 'slim-rails'
 gem 'sidekiq'
 
 gem 'blorgh', path: "../blorgh"
+gem "font-awesome-rails"
