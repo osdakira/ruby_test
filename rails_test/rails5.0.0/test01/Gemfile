@@ -47,3 +47,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'agent'
 gem 'coupons', git: 'https://github.com/fnando/coupons.git'
+gem 'cancancan'
