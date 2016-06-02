@@ -1,5 +1,7 @@
 class User < ApplicationRecord
+  attr_accessor :admin
+
   def admin?
-    true
+    !!@admin
   end
 end

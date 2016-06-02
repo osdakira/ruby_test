@@ -32,7 +32,7 @@ class Ability
     if user.admin?
       can :index, User
     else
-      cannot :index, User
+      can :index, User, id: user.id
     end
   end
 end
