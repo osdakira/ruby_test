@@ -28,5 +28,11 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
+
+    if user.admin?
+      can :index, User
+    else
+      cannot :index, User
+    end
   end
 end
