@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/fnando/coupons.git
+  revision: 0bed9cfad48a21cbcdb6030e619b78fb3c445017
+  specs:
+    coupons (0.0.0)
+      autoprefixer-rails
+      page_meta
+      rails (>= 4.2.0, < 5.0.0)
+      sass-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -40,6 +50,8 @@ GEM
       tzinfo (~> 1.1)
     agent (0.11.0)
     arel (7.0.0)
+    autoprefixer-rails (6.3.6)
+      execjs
     builder (3.2.2)
     byebug (8.2.2)
     coffee-rails (4.1.1)
@@ -78,6 +90,8 @@ GEM
     nio4r (1.2.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    page_meta (0.1.1)
+      rails
     puma (3.2.0)
     rack (2.0.0.alpha)
       json
@@ -151,6 +165,7 @@ DEPENDENCIES
   agent
   byebug
   coffee-rails (~> 4.1.0)
+  coupons!
   jbuilder (~> 2.0)
   jquery-rails
   puma
