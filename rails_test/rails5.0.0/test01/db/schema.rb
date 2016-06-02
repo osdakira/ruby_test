@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305230400) do
+ActiveRecord::Schema.define(version: 20160602115728) do
 
   create_table "coupon_redemptions", force: :cascade do |t|
     t.integer  "coupon_id",  null: false
@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(version: 20150305230400) do
     t.datetime "created_at",                              null: false
     t.datetime "updated_at",                              null: false
     t.text     "attachments",              default: "{}", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
